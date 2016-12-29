@@ -1,0 +1,32 @@
+<html>
+<body>
+<div>
+
+  <div>
+    {% if tradify %}
+    <img src="{{ tradify.userprofile.photo.url }}">
+    <div>
+      {{ tradify.username }}
+    </div>
+    <div class="bio">{{ tradify.userprofile.bio }}</div>
+    <a href="{% url "nice" user_id=tradify.id %}">
+      Nice
+    </a>
+    <a href="{% url "nope" user_id=tradify.id %}">
+      Nope
+    </a>
+    {% else %}
+    Wait for more people to join!
+    {% endif %}
+  </div>
+
+  {% if tradify %}
+    {{ tradify.username }}
+    {{ tradify.is_staff }}
+    {{ tradify.userprofile.bio }}
+    {% else %}
+    Wait for more people to join!
+    {% endif %}
+</div>
+</body>
+</html>

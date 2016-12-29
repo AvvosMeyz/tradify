@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h1 class="text-center">Welcome {{ request.user.username }} </h1>
+            <p class="text-center">Start Uploading the photo of your book!</p>
+            <input class="" type="file" name="" value="Photo">
+            <br>
+            <div style="display: inline;">
+              <input  class="btn-warning" type="submit" name="" value="Go">
+            </div>
+
+            <!--  <img src="{{ user.userprofile.photo.url }}"> -->
+        </div>
+    </div>
+</div>
+{% endblock %}
